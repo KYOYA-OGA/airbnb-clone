@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useRouter } from 'next/router'
 import InfoCard from '../components/InfoCard'
+import Map from '../components/Map'
 // import { format, parseISO } from 'date-fns'
 
 const search = ({ searchResult }) => {
@@ -20,7 +21,10 @@ const search = ({ searchResult }) => {
       <main className="flex">
         <section className="flex-grow px-6 pt-14">
           <p className="text-xs">
-            300+ Stays - {range} - from {numberOfGuests} guests
+            <span className="px-4 py-2 text-white bg-red-400 rounded-full">
+              {range}
+            </span>{' '}
+            - from {numberOfGuests} guests
           </p>
           <h1 className="mt-2 mb-6 text-3xl font-semibold">
             Stays in {location}
@@ -36,13 +40,16 @@ const search = ({ searchResult }) => {
 
           <div className="flex flex-col">
             {searchResult.map((result) => (
-              <InfoCard result={result} />
+              <InfoCard result={result} key={result.img} />
             ))}
           </div>
         </section>
+        {/* map */}
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResult={searchResult} />
+        </section>
       </main>
-      {/* map */}
-      <aside></aside>
+
       <Footer />
     </>
   )

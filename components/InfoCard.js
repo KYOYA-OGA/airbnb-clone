@@ -6,7 +6,7 @@ const InfoCard = ({ result }) => {
   const { img, location, title, description, star, price, total, long, lat } =
     result
   return (
-    <div className="flex px-2 pr-4 transition duration-200 ease-out border-b cursor-pointer py-7 hover:opacity-80 hover:shadow-lg first:border-t">
+    <div className="flex px-2 pr-4 transition duration-200 ease-out border-b rounded-lg cursor-pointer py-7 hover:opacity-80 hover:shadow-lg first:border-t">
       <div className="relative flex-shrink-0 w-40 h-24 md:h-52 md:w-80">
         <Image
           src={img}

@@ -2,6 +2,13 @@
 
 ### 技術スタック
 
+- React(Next.js)
+- tailwindCSS
+- Mapbox
+
 ### 機能
 
-n
+- SSG
+- SSR
+- カレンダー検索機能（部分的）
+- レスポンシブ
